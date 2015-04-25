@@ -56,5 +56,4 @@ tidy <- tidy[order(tidy$Subject, tidy$Activity),]
 write.table(tidy, file="tidyData.txt", row.name=FALSE, sep="/t")
 
 # Make a codebook of this work
-knit2html("courseProjectCodebook.Rmd");
-
+knit2html(input="run_analysis.R", output="runAnalysisCodebook.Rmd");
