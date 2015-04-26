@@ -54,6 +54,3 @@ names(dataMerged) <- gsub("BodyBody", "Body", names(dataMerged))
 tidy <- aggregate(. ~Subject + Activity, dataMerged, mean) 
 tidy <- tidy[order(tidy$Subject, tidy$Activity),]
 write.table(tidy, file="tidyData.txt", row.name=FALSE, sep="/t")
-
-# Make a codebook of this work
-knit2html(input="run_analysis.R", output="runAnalysisCodebook.Rmd");
